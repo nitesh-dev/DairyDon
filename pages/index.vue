@@ -36,6 +36,8 @@ const content1 = "Rolling you through a creamy, luscious taste with tempting wav
         <img src="../public/images/outline/fruits.png" class="outline top-right">
     </section>
 
+    <ProductsArea/>
+
 
 </template>
 <style scoped>
@@ -116,7 +118,7 @@ const content1 = "Rolling you through a creamy, luscious taste with tempting wav
 
 .cream-info{
     position: relative;
-    padding: 5rem 0;
+    padding-top: 3rem;
 }
 
 .cream-info .outline{
@@ -132,7 +134,7 @@ const content1 = "Rolling you through a creamy, luscious taste with tempting wav
 .cream-info .top-right{
     right: 0;
     top: 40px;
-    height: 160px;
+    height: 180px;
 }
 
 

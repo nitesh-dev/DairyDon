@@ -16,7 +16,7 @@ body {
     --color-primary: #490341;
     --color-secondary: #B1099E;
     --color-secondary-variant: #FC0393;
-    --color-secondary-light: #FFF1F3;
+    --color-secondary-light: #f9eef8;
     --color-on-primary: white;
     --color-on-surface: #664C63;
     --color-on-surface-light: #909090;
@@ -100,7 +100,12 @@ button:hover {
     scale: 1.05;
 }
 
-button.primary {
+a {
+    color: var(--color-on-surface);
+    text-decoration: none;
+}
+
+/* button.primary {
     background: var(--color-primary);
     border-radius: 4px;
     color: var(--color-on-primary);
@@ -121,10 +126,7 @@ button.primary svg {
 
 }
 
-a {
-    color: var(--color-on-surface);
-    text-decoration: none;
-}
+
 
 button.primary-outline {
     background: transparent;
@@ -137,10 +139,7 @@ button.primary-outline {
     fill: var(--color-primary);
 }
 
-button.icon {
-    aspect-ratio: 1/1;
-}
-
+ */
 
 
 /* Hide scrollbar for Chrome, Safari and Opera */
