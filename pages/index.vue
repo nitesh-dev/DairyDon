@@ -1,6 +1,15 @@
 <script setup lang='ts'>
+import IceCreamInfo from '../components/IceCreamInfo.vue';
+import Header from '../components/Header.vue';
+import product1 from '~/public/images/ice-cream1.png'
+
+
+const heading1 = 'Taste That Will Make You Bombinate With Joy'
+const content1 = "Rolling you through a creamy, luscious taste with tempting waves and rich ingredients, with the special twist of freshness and novelties. Taste the melt-in-the-mouth flavours, that no young or old can resist."
 </script>
 <template>
+
+    <!-- Home landing -->
     <section class="landing">
         <div class="content">
             <Header></Header>
@@ -17,6 +26,17 @@
         <img src="../public/images/outline/crunch.png" class="outline top-right" alt="crunch">
         <img src="../public/images/outline/staberry.png" class="outline bottom-left"  alt="strawberry">
     </section>
+
+
+
+    <!-- ice cream info -->
+    <section class="cream-info">
+        <IceCreamInfo :heading="heading1" :content="content1" button-text="Read More" :image="product1"></IceCreamInfo>
+        <img src="../public/images/outline/strawberry2.png" class="outline top-left">
+        <img src="../public/images/outline/fruits.png" class="outline top-right">
+    </section>
+
+
 </template>
 <style scoped>
 
@@ -89,6 +109,32 @@
     left: 0;
     bottom: 110px;
 }
+
+
+
+/* ---------------------- cream info ------------ */
+
+.cream-info{
+    position: relative;
+    padding: 5rem 0;
+}
+
+.cream-info .outline{
+    position: absolute;
+    height: 140px;
+}
+
+.cream-info .top-left{
+    left: 0;
+    top: 0;
+}
+
+.cream-info .top-right{
+    right: 0;
+    top: 40px;
+    height: 160px;
+}
+
 
 
 

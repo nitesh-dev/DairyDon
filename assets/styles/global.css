@@ -23,10 +23,10 @@ body {
 
 
     --big-font-2: 48px;
-    --big-font: 38px;
+    --big-font: 32px;
     --average-2-font: 24px;
     --average-font: 20px;
-    --medium-font: 13px;
+    --medium-font: 14px;
     --medium-2-font: 16px;
     --small-font: 12px;
 
@@ -76,7 +76,7 @@ h1 {
 }
 
 h2 {
-    font-size: var(--average-2-font);
+    font-size: var(--big-font);
 }
 
 h3 {
