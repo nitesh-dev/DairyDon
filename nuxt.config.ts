@@ -1,4 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+// https://nuxt.com/docs/api/configuration/nuxt-config 
+// 
 export default defineNuxtConfig({
   devtools: { enabled: false },
   css: ["@/assets/styles/global.css"],
@@ -9,8 +10,13 @@ export default defineNuxtConfig({
       link: [
         {
           rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css?family=Roboto",
+          href: "https://fonts.googleapis.com/css?family=Poppins",
         },
+        {
+          rel: "stylesheet",
+          href: "https://fonts.googleapis.com/css?family=Baloo",
+        },
+
       ],
     },
   },

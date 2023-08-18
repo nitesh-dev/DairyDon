@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'Roboto';
+    font-family: 'Poppins';
     letter-spacing: 1px;
 }
 
@@ -13,11 +13,13 @@ body {
 
     --color-surface: rgb(255, 255, 255);
     --color-surface-variant: #E8F2FF;
-    --color-primary: #143584;
+    --color-primary: #490341;
+    --color-secondary: #B1099E;
+    --color-secondary-variant: #FC0393;
+    --color-secondary-light: #FFF1F3;
     --color-on-primary: white;
-    --color-on-surface: #5E5E5E;
-    --color-on-surface-dark: rgb(46, 46, 46);
-    --color-on-surface-variant: #7F7F7F;
+    --color-on-surface: #664C63;
+    --color-on-surface-light: #909090;
 
 
     --big-font: 38px;
@@ -29,7 +31,7 @@ body {
 
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    /* -moz-osx-font-smoothing: grayscale; */
     -webkit-text-size-adjust: 100%;
 }
 
@@ -44,6 +46,14 @@ p {
     margin: 1em 0;
 }
 
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Baloo';
+}
+
 h1,
 h2,
 h3,
@@ -51,7 +61,6 @@ h4,
 h5 {
     color: var(--color-on-surface-dark);
     font-weight: bold;
-
 }
 
 p,
@@ -86,7 +95,7 @@ button {
     transition: all 200ms;
 }
 
-button:hover{
+button:hover {
     scale: 1.05;
 }
 
@@ -159,15 +168,15 @@ button.icon {
     h1 {
         font-size: calc(var(--big-font) - 12px);
     }
-    
+
     h2 {
         font-size: calc(var(--average-2-font) - 4px);
     }
-    
+
     h3 {
         font-size: calc(var(--average-font) - 2px);
     }
-    
+
 }
 
 @media only screen and (max-width: 600px) {
