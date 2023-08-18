@@ -18,9 +18,8 @@ defineProps<{
             <hr>
             <p>{{ content }}</p>
             <br>
-            <WidgetStarButton>
-                <span>Read</span>
-                <span>More</span>
+            <WidgetStarButton v-if="buttonText.length > 0">
+                <span v-for="item in buttonText.split(' ')">{{ item }}</span>
             </WidgetStarButton>
         </div>
     </div>

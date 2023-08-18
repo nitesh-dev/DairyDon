@@ -2,10 +2,14 @@
 import IceCreamInfo from '../components/IceCreamInfo.vue';
 import Header from '../components/Header.vue';
 import product1 from '~/public/images/ice-cream1.png'
+import product2 from '~/public/images/multi-ice-cream.png'
 
 
 const heading1 = 'Taste That Will Make You Bombinate With Joy'
 const content1 = "Rolling you through a creamy, luscious taste with tempting waves and rich ingredients, with the special twist of freshness and novelties. Taste the melt-in-the-mouth flavours, that no young or old can resist."
+
+const heading2 = "Serving Delicious Since 1981"
+const content2 = "It all started in the year 1981 when D.D. Yeola family establishes an Ice Cream Parlour at Mahatma Gandhi Road Nashik (Maharashtra) India, with intent to source Softies, Thick Shakes and Mouth-watering Ice Creams.  Today, our product lineup includes many-flavoured ice creams, lip-smacking thick shakes, irresistible softies and many more to come. Well-known for our speciality in Ice Creams, we strive to source better without exception."
 </script>
 <template>
 
@@ -37,6 +41,16 @@ const content1 = "Rolling you through a creamy, luscious taste with tempting wav
     </section>
 
     <ProductsArea/>
+
+    <!-- ice cream info 2 -->
+    <section class="cream-info2">
+        <div class="page">
+            <img src="../public/images/outline/cashcrew.png" class="outline top-right">
+        </div>
+        <IceCreamInfo :heading="heading2" :content="content2" button-text="" :image="product2"></IceCreamInfo>
+        
+        <img src="../public/images/outline/glass-shake.png" class="outline bottom-right">
+    </section>
 
 
 </template>
@@ -135,6 +149,37 @@ const content1 = "Rolling you through a creamy, luscious taste with tempting wav
     right: 0;
     top: 40px;
     height: 180px;
+}
+
+
+
+
+/* ------------------- cream info 2 ---------------- */
+
+.cream-info2 {
+    position: relative;
+}
+
+.cream-info2 .page {
+    padding-top: 4rem;
+    position: relative;
+}
+
+.cream-info2 .outline{
+    position: absolute;
+    height: 150px;
+}
+
+.cream-info2 .top-right{
+    right: 0;
+    top: -50px;
+    height: 200px;
+}
+
+
+.cream-info2 .bottom-right{
+    right: 0;
+    bottom: 0;
 }
 
 
