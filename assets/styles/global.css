@@ -25,7 +25,7 @@ body {
     --big-font: 38px;
     --average-2-font: 24px;
     --average-font: 20px;
-    --medium-font: 14px;
+    --medium-font: 13px;
     --medium-2-font: 16px;
     --small-font: 12px;
 
@@ -160,7 +160,7 @@ button.icon {
 
 
 
-@media only screen and (max-width: 700px) {
+/* @media only screen and (max-width: 700px) {
     .page {
         padding: 0 16px;
     }
@@ -183,4 +183,4 @@ button.icon {
     .page {
         padding: 0 12px;
     }
-}
+} */
