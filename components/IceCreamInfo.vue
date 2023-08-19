@@ -4,7 +4,8 @@ defineProps<{
     heading: string,
     content: string,
     buttonText: string,
-    image: string
+    image: string,
+    subHeading: string
 }>()
 </script>
 <template>
@@ -16,6 +17,7 @@ defineProps<{
         <div class="right">
             <h2>{{ heading }}</h2>
             <hr>
+            <p class="sub" v-if="subHeading.length > 0">{{ subHeading }}</p>
             <p>{{ content }}</p>
             <br>
             <WidgetStarButton v-if="buttonText.length > 0">
@@ -37,6 +39,8 @@ defineProps<{
 
 .page img{
     width: 100%;
+    max-height: 420px;
+    object-fit: contain;
 }
 
 .page h2{
@@ -60,6 +64,12 @@ defineProps<{
     width: 8px;
     transform: rotateZ(45deg) translate(-20%, -40%);
     position: absolute;
+}
+
+.page .sub{
+    font-size: var(--average-font);
+    font-weight: 600;
+    font-style: italic;
 }
 
 </style>

@@ -36,7 +36,7 @@ const content2 = "It all started in the year 1981 when D.D. Yeola family establi
 
     <!-- ice cream info -->
     <section class="cream-info">
-        <IceCreamInfo :heading="heading1" :content="content1" button-text="Read More" :image="product1"></IceCreamInfo>
+        <IceCreamInfo :heading="heading1" :content="content1" button-text="Read More" :image="product1" sub-heading=""></IceCreamInfo>
         <img src="../public/images/outline/strawberry2.png" class="outline top-left">
         <img src="../public/images/outline/fruits.png" class="outline top-right">
     </section>
@@ -48,7 +48,7 @@ const content2 = "It all started in the year 1981 when D.D. Yeola family establi
         <div class="page">
             <img src="../public/images/outline/cashcrew.png" class="outline top-right">
         </div>
-        <IceCreamInfo :heading="heading2" :content="content2" button-text="" :image="product2"></IceCreamInfo>
+        <IceCreamInfo :heading="heading2" :content="content2" button-text="" :image="product2" sub-heading=""></IceCreamInfo>
         
         <img src="../public/images/outline/glass-shake.png" class="outline bottom-right">
     </section>
