@@ -21,7 +21,7 @@ const content1 = `In the year 1981 D.D. Yeola family established an Ice cream Pa
     </section>
 
 
-    <!--  ----------- info ------------------ -->
+    <!-- ----------- info ------------------ -->
     <section class="info">
         <IceCreamInfo :image="product1" :heading="heading1" :content="content1" button-text="" :sub-heading="smallHeading">
         </IceCreamInfo>
@@ -39,8 +39,6 @@ const content1 = `In the year 1981 D.D. Yeola family established an Ice cream Pa
 
     <VisionMission></VisionMission>
     <History></History>
-
-
 
     <Footer></Footer>
 </template>
