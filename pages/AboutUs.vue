@@ -38,6 +38,7 @@ const content1 = `In the year 1981 D.D. Yeola family established an Ice cream Pa
     </section>
 
     <VisionMission></VisionMission>
+    <History></History>
 
 
 
