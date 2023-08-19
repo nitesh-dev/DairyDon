@@ -11,17 +11,27 @@
                             <h2>1989</h2>
                             <span>OUR FIRST OUTLET</span>
                             <span>@MG ROAD, NASHIK</span>
-
-                            <div class="line">
-
-                            </div>
+                            <div class="line"></div>
                         </div>
                         <img src="../public/images/history/chip-arrow-right.png">
                     </div>
+                    <div class="hidden-line"></div>
                 </div>
             </div>
             <div class="right">
-
+                <div class="card-holder">
+                    <div class="card">
+                        <img src="../public/images/history/chip-arrow-left.png">
+                        <div class="area">
+                            <div class="circle">1989</div>
+                            <h2>1989</h2>
+                            <span>OUR FIRST OUTLET</span>
+                            <span>@MG ROAD, NASHIK</span>
+                            <div class="line"></div>
+                        </div>
+                    </div>
+                    <div class="hidden-line"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -37,6 +47,23 @@
     grid-template-columns: 50% 50%;
 }
 
+
+.history .card-holder{
+    position: relative;
+}
+
+
+.history .card-holder .hidden-line{
+    position: absolute;
+    height: 80px;
+    width: 100%;
+    border: 4px solid var(--color-secondary-variant);
+    top: -28px;
+    z-index: -1;
+    border-right: none;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+}
 
 .history .card{
     display: grid;
@@ -119,7 +146,48 @@
     background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
     transform: translate(-100% ,-36%);
-
 }
+
+
+/* ------------ modification for right side ------------*/
+.history .right .card{
+    grid-template-columns: max-content auto;
+    justify-content: left;
+}
+
+.history .right .card .area{
+    background-color: var(--color-secondary-variant);
+    border-radius: 0 12px 12px 0;
+    padding-left: 15px;
+}
+
+
+.history .right .area .circle{
+    border: 3px solid #FC66BD;
+    left: unset;
+    right: 0;
+    color: var(--color-secondary-variant);
+    transform: translate(50%, -50%);
+}
+
+.history .right .area .line{
+    right: unset;
+    left: -55px;
+}
+
+.history .right .area .line::before{
+    transform: translate(100% ,-36%);
+    right: 0;
+}
+
+.history .right .card-holder .hidden-line{
+
+    border: 4px solid var(--color-secondary);
+    border-left: none;
+    border-radius: 0;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
 
 </style>
