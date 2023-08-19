@@ -1,6 +1,7 @@
 <script setup lang='ts'>
 import IceCreamInfo from '../components/IceCreamInfo.vue';
 import Header from '../components/Header.vue';
+
 import product1 from '~/public/images/ice-cream1.png'
 import product2 from '~/public/images/multi-ice-cream.png'
 
@@ -51,6 +52,8 @@ const content2 = "It all started in the year 1981 when D.D. Yeola family establi
         
         <img src="../public/images/outline/glass-shake.png" class="outline bottom-right">
     </section>
+
+    <Testimonial></Testimonial>
 
 
 </template>
