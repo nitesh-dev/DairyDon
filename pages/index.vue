@@ -56,6 +56,7 @@ const content2 = "It all started in the year 1981 when D.D. Yeola family establi
     <Testimonial></Testimonial>
 
     <Map></Map>
+    <Footer></Footer>
 
 
 </template>
