@@ -75,7 +75,7 @@ products.push({
     <!-- landing -->
     <section class="landing">
         <div class="content">
-            <Header></Header>
+            <Header active="/products"></Header>
             <h2>Products</h2>
 
         </div>

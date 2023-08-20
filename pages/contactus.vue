@@ -5,7 +5,7 @@
     <!-- landing -->
     <section class="landing">
         <div class="content">
-            <Header></Header>
+            <Header active="/contact"></Header>
             <h2>Get in Touch with Us</h2>
 
         </div>

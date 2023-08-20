@@ -108,7 +108,7 @@ blogs.push({
     <!-- landing -->
     <section class="landing">
         <div class="content">
-            <Header></Header>
+            <Header active="/blog"></Header>
             <h2>Blog</h2>
 
         </div>

@@ -11,7 +11,7 @@ const content1 = `In the year 1981 D.D. Yeola family established an Ice cream Pa
     <!-- landing -->
     <section class="landing">
         <div class="content">
-            <Header></Header>
+            <Header active="/about"></Header>
             <h2>About Us</h2>
 
         </div>

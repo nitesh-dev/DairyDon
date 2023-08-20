@@ -11,7 +11,7 @@ const content = "Well, your search ends here. With profound hold in the Ice Crea
     <!-- landing -->
     <section class="landing">
         <div class="content">
-            <Header></Header>
+            <Header active="/franchise"></Header>
             <h2>Franchise</h2>
 
         </div>

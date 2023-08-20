@@ -17,7 +17,7 @@ const content2 = "It all started in the year 1981 when D.D. Yeola family establi
     <!-- Home landing -->
     <section class="landing">
         <div class="content">
-            <Header></Header>
+            <Header active="/home"></Header>
             <h1>Bringing in the <br>Luscious Ice Creams</h1>
             <span>Ice Cream | Shakes  | Softies</span>
 

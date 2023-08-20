@@ -1,17 +1,20 @@
 <script setup lang='ts'>
+defineProps<{
+    active: string
+}>()
 </script>
 <template>
     <div class="page">
         <header>
-            <NuxtLink to="/">Home</NuxtLink>
-            <NuxtLink to="/">About Us</NuxtLink>
-            <NuxtLink to="/">Products</NuxtLink>
+            <NuxtLink :class="{'active': active == '/home'}" to="/">Home</NuxtLink>
+            <NuxtLink :class="{'active': active == '/about'}" to="/aboutus">About Us</NuxtLink>
+            <NuxtLink :class="{'active': active == '/products'}" to="/products">Products</NuxtLink>
             <div class="logo">
                 <img src="../public/images/logo.png" alt="logo">
             </div>
-            <NuxtLink to="/">Franchise</NuxtLink>
-            <NuxtLink to="/">Blog</NuxtLink>
-            <NuxtLink to="/">Contact Us</NuxtLink>
+            <NuxtLink :class="{'active': active == '/franchise'}" to="/franchise">Franchise</NuxtLink>
+            <NuxtLink :class="{'active': active == '/blog'}" to="/blog">Blog</NuxtLink>
+            <NuxtLink :class="{'active': active == '/contact'}" to="/contactus">Contact Us</NuxtLink>
 
         </header>
     </div>
@@ -46,5 +49,11 @@ header .logo img {
     height: 50px;
     display: block;
     margin: 10px;
+}
+
+
+header .active{
+    color: var(--color-secondary);
+    font-weight: bold;
 }
 </style>
