@@ -257,7 +257,7 @@ blogs.push({
     right: 16px;
     transform: translateY(-50%);
     display: grid;
-    width: 130px;
+    width: 125px;
     grid-template-columns: max-content 1fr;
     padding: 4px 12px;
     align-items: center;
