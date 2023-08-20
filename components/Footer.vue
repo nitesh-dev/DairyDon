@@ -102,7 +102,7 @@ footer .socials h3 {
     margin-top: 0;
 }
 
-footer .socials a{
+footer .socials a {
     background-color: white;
     width: 40px;
     height: 40px;
@@ -113,16 +113,16 @@ footer .socials a{
 }
 
 
-footer .socials a svg{
+footer .socials a svg {
     fill: inherit;
 }
 
-footer .socials a.right{
+footer .socials a.right {
     fill: white;
     background-color: var(--color-secondary-variant);
 }
 
-footer .socials a.left{
+footer .socials a.left {
     fill: var(--color-secondary-variant);
     background-color: white;
     margin-right: 1rem;
@@ -130,15 +130,28 @@ footer .socials a.left{
 
 
 /* ---------------- copyright --------------- */
-footer hr{
+footer hr {
     border: none;
     border-bottom: 1px solid #6D0862;
     margin-top: 5rem;
 }
 
-footer .copyright{
+footer .copyright {
     text-align: center;
     color: #c797c1b6;
 }
 
+
+
+@media only screen and (max-width: 800px) {
+    footer .holder {
+        grid-template-columns: 100%;
+        gap: 2rem;
+    }
+
+    footer .socials {
+        max-width: unset;
+    }
+
+}
 </style>

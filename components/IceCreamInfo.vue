@@ -27,37 +27,38 @@ defineProps<{
     </div>
 </template>
 <style scoped>
-.page{
+.page {
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
-.page .left, .page .right{
+.page .left,
+.page .right {
     width: 50%
 }
 
-.page img{
+.page img {
     width: 100%;
     max-height: 420px;
     object-fit: contain;
 }
 
-.page h2{
+.page h2 {
     line-height: 1;
     color: var(--color-secondary);
     margin-bottom: 0;
 }
 
-.page hr{
+.page hr {
     width: 100px;
     margin: 0;
     border: none;
     border-bottom: 2px solid var(--color-secondary-variant);
-    margin: 1rem 0; 
+    margin: 1rem 0;
 }
 
-.page hr::before{
+.page hr::before {
     content: "";
     background-color: var(--color-secondary-variant);
     height: 8px;
@@ -66,10 +67,22 @@ defineProps<{
     position: absolute;
 }
 
-.page .sub{
+.page .sub {
     font-size: var(--average-font);
     font-weight: 600;
     font-style: italic;
 }
 
+
+@media only screen and (max-width: 700px) {
+    .page {
+        flex-direction: column-reverse;
+        margin-bottom: 2rem;
+    }
+
+    .page .left,
+    .page .right {
+        width: 100%;
+    }
+}
 </style>

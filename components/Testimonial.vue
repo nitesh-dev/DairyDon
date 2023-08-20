@@ -195,7 +195,7 @@ const navigation = {
     text-align: center;
 }
 
-.testimonial .profile .quotes{
+.testimonial .profile .quotes {
     position: absolute;
     left: 30px;
     top: 35%;
@@ -209,10 +209,10 @@ const navigation = {
     object-fit: cover;
 }
 
-.testimonial .outline{
+.testimonial .outline {
     position: absolute;
-    width: 120px;
-    bottom: 50px;
+    width: 15vw;
+    bottom: 5vw;
     right: 0;
 }
 
@@ -278,6 +278,34 @@ const navigation = {
     fill: white;
     background-color: var(--color-secondary);
     border: 1px solid var(--color-secondary);
+}
+
+
+@media only screen and (max-width: 800px) {
+    .testimonial .button {
+        display: none;
+    }
+
+    .swiper-slide-prev .profile {
+        transform: translateX(-120%) scale(1, 1);
+        opacity: 1;
+    }
+
+    .swiper-slide-next .profile {
+        transform: translateX(120%) scale(1, 1);
+        opacity: 1;
+    }
+
+    .testimonial .profile {
+        width: calc(100% - var(--page-gap) * 2);
+        margin: 1rem var(--page-gap);
+        margin-top: 4px;
+
+    }
+
+    .testimonial .page{
+        padding: 0;
+    }
 }
 </style>
 

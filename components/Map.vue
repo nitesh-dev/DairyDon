@@ -30,17 +30,18 @@
 
 .map .outline{
     position: absolute;
-    width: 120px;
 }
 
 .map .top-left{
-    left: 50px;
-    top: -100px;
+    left: 4vw;
+    top: -10vw;
+    width: 10vw;
 }
 
 .map .bottom-left{
     left: 0;
-    bottom: -150px;
+    bottom: -19vw;
+    width: 13vw;
 }
 
 .map h2 {
@@ -100,6 +101,13 @@
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+}
+
+@media only screen and (max-width: 700px) {
+
+    .map .outline{
+        display: none;
+    }
 }
 
 

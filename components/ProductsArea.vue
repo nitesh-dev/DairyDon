@@ -58,7 +58,8 @@ data.push({
                 </div>
 
                 <div class="product-holder">
-                    <ProductCard v-for="item in data" :image="item.image" :title="item.title" :content="item.content"></ProductCard>
+                    <ProductCard v-for="item in data" :image="item.image" :title="item.title" :content="item.content">
+                    </ProductCard>
                 </div>
             </div>
         </div>
@@ -136,29 +137,53 @@ data.push({
 
 /* -------------------- outline --------- */
 
-.products .outline{
+.products .outline {
     position: absolute;
-    height: 100px;
     width: auto;
 }
 
-.products .top-left{
+.products .top-left {
     left: 0;
-    top: 0;
+    top: 11vw;
+    width: 7vw;
 }
 
-.products .top-right{
-    right: 0;
-    top: 0;
+.products .top-right {
+    right: 9vw;
+    top: 3vw;
+    width: 11vw;
 }
 
-.products .bottom-right{
-    right: 0;
-    bottom: 0;
+.products .bottom-right {
+    right: 2vw;
+    bottom: 10vw;
+    width: 9vw;
 }
 
 
+@media only screen and (max-width: 1150px) {
+    .products .product-holder {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
 
+
+@media only screen and (max-width: 800px) {
+    .products .product-holder {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .products .content-holder {
+        grid-template-columns: 100%;
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .products .product-holder {
+        grid-template-columns: 100%;
+    }
+}
 
 
 </style>
