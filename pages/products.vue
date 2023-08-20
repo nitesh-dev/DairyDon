@@ -171,6 +171,7 @@ products.push({
     gap: 1rem;
     position: relative;
     padding-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .products .card img {
