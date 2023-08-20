@@ -52,6 +52,8 @@ const navigation = {
 }
 
 
+let activeIndex = ref(0);
+
 </script>
 <template>
     <section class="testimonial">
@@ -66,8 +68,8 @@ const navigation = {
                 <!-- testimonial area -->
                 <div class="container">
                     <Swiper :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperNavigation, SwiperController]"
-                        :slides-per-view="1" :loop="true" :effect="'creative'" :autoplay="autoPlay"
-                        :navigation="navigation">
+                        :slides-per-view="1" :loop="true" :effect="'creative'" :autoplay="autoPlay" :navigation="navigation"
+                        @slideChange="activeIndex = $event.realIndex" :pagination="true" :centeredSlides="true">
 
                         <SwiperSlide v-for="slide, index in slideContent" :key="index">
 
@@ -88,6 +90,11 @@ const navigation = {
 
                         </SwiperSlide>
                     </Swiper>
+
+                    <div class="custom-pagination">
+                        <div v-for="(image, index) in slideContent" :key="index" class="custom-pagination-bullet"
+                            :class="{ active: index === activeIndex }"></div>
+                    </div>
 
                     <div class="button swiper-button-prev">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -281,6 +288,35 @@ const navigation = {
 }
 
 
+
+/*  */
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    display: none;
+}
+
+.custom-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.custom-pagination-bullet.active {
+    background-color: var(--color-secondary);
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--color-secondary);
+}
+
+
+
 @media only screen and (max-width: 800px) {
     .testimonial .button {
         display: none;
@@ -303,9 +339,35 @@ const navigation = {
 
     }
 
-    .testimonial .page{
+    .testimonial .page {
         padding: 0;
     }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .testimonial .content {
+        background-image: url('../public/images/testimonial/testimonial2.png');
+        background-size: 100%;
+        background-position-y: 75px;
+    }
+
+    .testimonial .profile {
+        margin-top: 1rem;
+    }
+
+    .testimonial h2 {
+        margin-top: 3rem;
+    }
+
+    .custom-pagination {
+        display: flex;
+    }
+
+    .testimonial .outline {
+        width: 25vw;
+    }
+
 }
 </style>
 

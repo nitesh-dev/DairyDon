@@ -183,7 +183,15 @@ data.push({
     .products .product-holder {
         grid-template-columns: 100%;
     }
+
+    .products .top-left,
+    .products .top-right {
+        display: none;
+    }
+
+    .products h2 {
+        margin-top: 2.5em;
+    }
+
 }
-
-
 </style>

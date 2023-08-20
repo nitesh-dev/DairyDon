@@ -214,9 +214,75 @@ const content2 = "It all started in the year 1981 when D.D. Yeola family establi
 
     .landing .content {
 
-        min-height: 450px;
+        min-height: 500px;
     }
+
+    .landing .top-left {
+        top: 150px;
+        width: 20vw;
+        left: -5vw;
+    }
+
+    .landing .top-right {
+        right: 0px;
+        top: 160px;
+        width: 12vw;
+    }
+
 }
 
+@media only screen and (max-width: 600px) {
 
+    .landing .top-left {
+        top: 140px;
+        width: 25vw;
+        left: -6vw;
+    }
+
+    .landing .bottom-left {
+        display: none;
+    }
+
+    .landing h1 {
+        margin-top: 4.5em;
+    }
+
+    .landing .content {
+        min-height: 900px;
+    }
+
+    .landing .image-holder .cone {
+        height: auto;
+        width: 100%;
+        bottom: -35vw;
+    }
+
+    .cream-info {
+        margin-top: 30vw;
+    }
+
+    .cream-info .outline {
+        display: none;
+    }
+
+    .landing span {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .cream-info2 .page {
+        padding-top: 1rem;
+        position: relative;
+    }
+
+    .cream-info2 .outline{
+        display: none;
+    }
+
+    .cream-info2 .bottom-right{
+        display: block;
+        width: 18vw;
+    }
+
+
+}
 </style>
