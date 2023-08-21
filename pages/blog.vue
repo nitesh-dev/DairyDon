@@ -144,18 +144,24 @@ blogs.push({
                 <span>More</span>
             </WidgetStarButton>
         </div>
+
+        <!-- outline -->
+        <img src="../public/images/outline/chocolate.png" class="outline top-left">
+        <img src="../public/images/outline/fruits.png" class="outline top-right">
+        <img src="../public/images/outline/barries.png" class="outline bottom-right">
+        <img src="../public/images/outline/cone-cream.png" class="outline bottom-left">
     </section>
 
 
     <Footer></Footer>
 </template>
 <style scoped>
-
-
 /* ------------------- blog -------------------- */
 
 .blog {
     padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
 }
 
 .blog .page {
@@ -209,7 +215,7 @@ blogs.push({
     margin-bottom: 5rem;
 }
 
-.blog .date{
+.blog .date {
     position: absolute;
     top: -8px;
     right: 16px;
@@ -224,16 +230,73 @@ blogs.push({
     border-radius: 6px;
 }
 
-.blog .date>span{
+.blog .date>span {
     font-size: var(--big-font);
     color: white !important;
 }
 
-.blog .date span{
+.blog .date span {
     display: block;
     color: rgba(255, 255, 255, 0.788);
     line-height: 1.4;
 }
 
 
+/* ----------- outline ------------- */
+.blog .outline {
+    position: absolute;
+    object-fit: contain;
+    z-index: -10;
+}
+
+.blog .top-left {
+    top: 50%;
+    left: 0;
+    width: 15vw;
+    transform: translateY(-50%);
+}
+
+.blog .top-right {
+    top: 5vw;
+    right: -1vw;
+    width: 11vw;
+    transform: translateY(-50%);
+}
+
+
+.blog .bottom-right {
+    right: 0px;
+    bottom: 10vw;
+    width: 12vw;
+}
+
+.blog .bottom-left {
+    left: 0;
+    bottom: -20vw;
+    width: 18vw;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .blog .outline {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .blog .page {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .blog .page {
+        grid-template-columns: 100%;
+    }
+
+    .blog {
+        padding-top: 0;
+    }
+}
 </style>
