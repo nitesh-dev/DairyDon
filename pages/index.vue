@@ -22,7 +22,7 @@ const content2 = "It all started in the year 1981 when D.D. Yeola family establi
 
         </div>
         <div class="image-holder">
-            <img src="../public/images/outline/Vector 3.png">
+            <img src="../public/images/outline/Vector3.png">
             <img src="../public/images/cone2.png" class="cone" alt="cone">
         </div>
 
