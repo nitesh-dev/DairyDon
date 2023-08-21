@@ -35,6 +35,18 @@ data.push({
     content: 'Our Mastani is a feast to produce the product'
 })
 
+
+
+
+
+const autoPlay = {
+    delay: 3000
+}
+
+
+let activeIndex = ref(0);
+
+
 </script>
 <template>
     <section class="products">
@@ -57,9 +69,29 @@ data.push({
                     </WidgetStarButton>
                 </div>
 
-                <div class="product-holder">
+                <div class="product-holder desktop">
                     <ProductCard v-for="item in data" :image="item.image" :title="item.title" :content="item.content">
                     </ProductCard>
+                </div>
+
+                <div class="container phone">
+                    <Swiper :modules="[SwiperAutoplay, SwiperEffectCreative, SwiperController]" :slides-per-view="1"
+                        :loop="true" :effect="'creative'" :autoplay="autoPlay" @slideChange="activeIndex = $event.realIndex"
+                        :pagination="true" :centeredSlides="true">
+
+                        <SwiperSlide v-for="item, index in data" :key="index">
+
+                            <ProductCard :image="item.image" :title="item.title" :content="item.content">
+                            </ProductCard>
+
+                        </SwiperSlide>
+                    </Swiper>
+
+                    <div class="custom-pagination">
+                        <div v-for="(image, index) in data" :key="index" class="custom-pagination-bullet"
+                            :class="{ active: index === activeIndex }"></div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -161,6 +193,61 @@ data.push({
 }
 
 
+
+/* ----------------- phone ------------- */
+
+
+.swiper-slide .product {
+    transition: all 200ms;
+    transform: translateX(-120%);
+}
+
+.swiper-slide-prev .product {
+    transform: translateX(-120%);
+}
+
+.swiper-slide-next .product {
+    transform: translateX(120%);
+}
+
+.swiper-slide-active .product {
+    transform: translateX(0);
+}
+
+.products .container.phone {
+    display: none;
+    margin-top: 3rem;
+}
+
+
+/*  */
+.custom-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+.custom-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.custom-pagination-bullet.active {
+    background-color: var(--color-secondary);
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--color-secondary);
+}
+
+
+
 @media only screen and (max-width: 1150px) {
     .products .product-holder {
         grid-template-columns: 1fr 1fr 1fr;
@@ -191,6 +278,20 @@ data.push({
 
     .products h2 {
         margin-top: 2.5em;
+    }
+
+    .products .desktop {
+        display: none;
+    }
+
+    .products .phone {
+        display: block !important;
+    }
+
+    .products .bottom-right {
+        right: 2vw;
+        bottom: 10vw;
+        width: 20vw;
     }
 
 }

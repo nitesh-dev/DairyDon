@@ -29,6 +29,7 @@ defineProps<{
     gap: 0.5rem;
     align-items: center;
     margin-top: 1rem;
+    justify-content: space-between;
 }
 
 .product h4 {
@@ -54,8 +55,8 @@ defineProps<{
 
 button {
     border-radius: 50%;
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     aspect-ratio: 1/1;
     border: none;
     background-color: white;
@@ -69,5 +70,17 @@ button svg {
     fill: var(--color-secondary);
     width: 18px;
     height: 18px;
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    .product {
+        padding: 1rem;
+    }
+
+    .product>div{
+        margin-right: 1rem;
+    }
 }
 </style>
