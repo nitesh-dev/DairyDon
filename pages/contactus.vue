@@ -5,13 +5,16 @@ import phoneImage from '~/public/images/header/contact-phone.png'
 </script>
 <template>
     <!-- landing -->
-    <OtherHeader active-tab="/contact" page-name="Contact Us" :desk-image="deskImage" :phone-image="phoneImage"></OtherHeader>
+    <OtherHeader active-tab="/contact" page-name="Contact Us" :desk-image="deskImage" :phone-image="phoneImage">
+    </OtherHeader>
 
-   
+
     <section class="contact">
 
         <div class="page">
 
+            <!-- outline -->
+            <img src="../public/images/outline/fruits.png" class="outline top-left">
 
             <div class="card-holder">
                 <!-- map -->
@@ -92,21 +95,24 @@ import phoneImage from '~/public/images/header/contact-phone.png'
                 </div>
 
                 <div class="input">
-                        <p>Message <span>*</span></p>
-                        <textarea rows="5"></textarea>
-                    </div>
+                    <p>Message <span>*</span></p>
+                    <textarea rows="5"></textarea>
+                </div>
 
                 <button type="submit">SUBMIT</button>
 
             </form>
         </div>
 
+        <!-- outline -->
+        <img src="../public/images/outline/chocolate.png" class="outline bottom-right">
+        <img src="../public/images/outline/cone-cream.png" class="outline bottom-left">
+
     </section>
 
     <Footer></Footer>
 </template>
 <style scoped>
-
 /* ------------------- franchise -------------------- */
 
 .contact {
@@ -115,7 +121,7 @@ import phoneImage from '~/public/images/header/contact-phone.png'
 }
 
 .contact .page {
-    overflow: auto;
+    position: relative;
 }
 
 .contact form {
@@ -138,7 +144,7 @@ import phoneImage from '~/public/images/header/contact-phone.png'
 }
 
 
-.contact form>p{
+.contact form>p {
     text-align: center;
     margin-bottom: 0;
     line-height: 1;
@@ -197,7 +203,8 @@ import phoneImage from '~/public/images/header/contact-phone.png'
     color: #FF4242;
 }
 
-.contact input, .contact textarea {
+.contact input,
+.contact textarea {
     width: 100%;
     border: 1px solid #DDD;
     background-color: #F4F4F4;
@@ -207,7 +214,7 @@ import phoneImage from '~/public/images/header/contact-phone.png'
 }
 
 
-.contact textarea{
+.contact textarea {
     resize: none;
 }
 
@@ -225,27 +232,28 @@ import phoneImage from '~/public/images/header/contact-phone.png'
 }
 
 
-.contact .card-holder{
+.contact .card-holder {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1rem;
     margin: 2rem 0;
 }
 
-.contact .card-holder .card{
+.contact .card-holder .card {
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.10);
     border-radius: 12px;
     padding: 1rem;
     margin: 1rem 0;
     text-align: center;
+    background-color: white;
 
 }
 
-.contact .card-holder .card svg{
+.contact .card-holder .card svg {
     height: 80px;
 }
 
-.contact .card-holder p{
+.contact .card-holder p {
     max-width: 250px;
     margin-left: auto;
     margin-right: auto;
@@ -253,5 +261,69 @@ import phoneImage from '~/public/images/header/contact-phone.png'
 
 
 
+/* ----------- outline ------------- */
+.contact .outline {
+    position: absolute;
+    object-fit: contain;
+    z-index: -10;
+}
 
+.contact .top-left {
+    top: -4vw;
+    left: -5vw;
+    width: 11vw;
+}
+
+.contact .bottom-right {
+    right: 0px;
+    bottom: 50%;
+    width: 15vw;
+    transform: scaleX(-1) translateY(50%);
+}
+
+.contact .bottom-left {
+    left: 0;
+    bottom: -18vw;
+    width: 16vw;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .contact .outline {
+        display: none;
+    }
+
+    .contact .top-left {
+        top: -8vw;
+        left: 0;
+        width: 15vw;
+        display: block;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+    .contact .card-holder {
+        grid-template-columns: 100%;
+        gap: 0;
+    }
+
+    .contact .top-left {
+        top: -15vw;
+        width: 30vw;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .contact .equal-2 {
+        grid-template-columns: 100%;
+        gap: 0;
+    }
+
+    .contact form {
+        padding: 1rem 1rem;
+    }
+
+}
 </style>
