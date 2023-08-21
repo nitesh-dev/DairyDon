@@ -9,6 +9,9 @@ import product7 from '~/public/images/product/product7.png'
 import product8 from '~/public/images/product/product8.png'
 import product9 from '~/public/images/product/product9.png'
 
+import deskImage from '~/public/images/header/about-desk.png'
+import phoneImage from '~/public/images/header/about-phone.png'
+
 const products = Array<{
     image: string,
     name: string,
@@ -73,16 +76,7 @@ products.push({
 </script>
 <template>
     <!-- landing -->
-    <section class="landing">
-        <div class="content">
-            <Header active="/products"></Header>
-            <h2>Products</h2>
-
-        </div>
-        <div class="image-holder">
-            <img src="../public/images/header/outline.png">
-        </div>
-    </section>
+    <OtherHeader active-tab="/products" page-name="Products" :desk-image="deskImage" :phone-image="phoneImage"></OtherHeader>
 
 
     <section class="products">
@@ -111,43 +105,6 @@ products.push({
     <Footer></Footer>
 </template>
 <style scoped>
-.landing {
-    display: grid;
-    grid-template-columns: 100%;
-    position: relative;
-}
-
-.landing .content {
-    background-color: var(--color-primary);
-}
-
-.landing h2 {
-    color: white;
-    text-align: center;
-    line-height: 1;
-    margin: 2.5em 0;
-}
-
-
-.landing span {
-    text-align: center;
-    font-size: var(--average-font);
-    display: block;
-    color: rgba(255, 255, 255, 0.747);
-    margin-top: 0.8em;
-}
-
-
-
-.landing .image-holder {
-    position: relative;
-}
-
-.landing .image-holder img {
-    width: 100%;
-}
-
-
 
 /* ------------------- products -------------------- */
 

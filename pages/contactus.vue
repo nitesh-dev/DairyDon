@@ -1,18 +1,11 @@
 <script setup lang='ts'>
+import deskImage from '~/public/images/header/about-desk.png'
+import phoneImage from '~/public/images/header/about-phone.png'
 
 </script>
 <template>
     <!-- landing -->
-    <section class="landing">
-        <div class="content">
-            <Header active="/contact"></Header>
-            <h2>Get in Touch with Us</h2>
-
-        </div>
-        <div class="image-holder">
-            <img src="../public/images/header/outline.png">
-        </div>
-    </section>
+    <OtherHeader active-tab="/contact" page-name="Contact Us" :desk-image="deskImage" :phone-image="phoneImage"></OtherHeader>
 
    
     <section class="contact">
@@ -113,43 +106,6 @@
     <Footer></Footer>
 </template>
 <style scoped>
-.landing {
-    display: grid;
-    grid-template-columns: 100%;
-    position: relative;
-}
-
-.landing .content {
-    background-color: var(--color-primary);
-}
-
-.landing h2 {
-    color: white;
-    text-align: center;
-    line-height: 1;
-    margin: 2.5em 0;
-}
-
-
-.landing span {
-    text-align: center;
-    font-size: var(--average-font);
-    display: block;
-    color: rgba(255, 255, 255, 0.747);
-    margin-top: 0.8em;
-}
-
-
-
-.landing .image-holder {
-    position: relative;
-}
-
-.landing .image-holder img {
-    width: 100%;
-}
-
-
 
 /* ------------------- franchise -------------------- */
 

@@ -1,6 +1,8 @@
 <script setup lang='ts'>
 
 import cone from '~/public/images/cone-6.png'
+import deskImage from '~/public/images/header/about-desk.png'
+import phoneImage from '~/public/images/header/about-phone.png'
 
 
 const heading = "Are you an entrepreneur looking for a good brand with beneficial returns?"
@@ -9,16 +11,7 @@ const content = "Well, your search ends here. With profound hold in the Ice Crea
 </script>
 <template>
     <!-- landing -->
-    <section class="landing">
-        <div class="content">
-            <Header active="/franchise"></Header>
-            <h2>Franchise</h2>
-
-        </div>
-        <div class="image-holder">
-            <img src="../public/images/header/outline.png">
-        </div>
-    </section>
+    <OtherHeader active-tab="/franchise" page-name="Franchise" :desk-image="deskImage" :phone-image="phoneImage"></OtherHeader>
 
     <IceCreamInfo :image="cone" buttonText="" :heading="heading" :content="content" subHeading=""></IceCreamInfo>
 
@@ -135,42 +128,6 @@ const content = "Well, your search ends here. With profound hold in the Ice Crea
     <Footer></Footer>
 </template>
 <style scoped>
-.landing {
-    display: grid;
-    grid-template-columns: 100%;
-    position: relative;
-}
-
-.landing .content {
-    background-color: var(--color-primary);
-}
-
-.landing h2 {
-    color: white;
-    text-align: center;
-    line-height: 1;
-    margin: 2.5em 0;
-}
-
-
-.landing span {
-    text-align: center;
-    font-size: var(--average-font);
-    display: block;
-    color: rgba(255, 255, 255, 0.747);
-    margin-top: 0.8em;
-}
-
-
-
-.landing .image-holder {
-    position: relative;
-}
-
-.landing .image-holder img {
-    width: 100%;
-}
-
 
 
 /* ------------------- franchise -------------------- */

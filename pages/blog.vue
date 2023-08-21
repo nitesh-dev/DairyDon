@@ -10,6 +10,9 @@ import blog7 from '~/public/images/blog/blog7.jpg'
 import blog8 from '~/public/images/blog/blog8.jpg'
 import blog9 from '~/public/images/blog/blog9.jpg'
 
+import deskImage from '~/public/images/header/about-desk.png'
+import phoneImage from '~/public/images/header/about-phone.png'
+
 
 const blogs = Array<{
     date: string,
@@ -106,16 +109,7 @@ blogs.push({
 </script>
 <template>
     <!-- landing -->
-    <section class="landing">
-        <div class="content">
-            <Header active="/blog"></Header>
-            <h2>Blog</h2>
-
-        </div>
-        <div class="image-holder">
-            <img src="../public/images/header/outline.png">
-        </div>
-    </section>
+    <OtherHeader active-tab="/blog" page-name="Blog" :desk-image="deskImage" :phone-image="phoneImage"></OtherHeader>
 
     <section class="blog">
         <div class="page">
@@ -156,42 +150,6 @@ blogs.push({
     <Footer></Footer>
 </template>
 <style scoped>
-.landing {
-    display: grid;
-    grid-template-columns: 100%;
-    position: relative;
-}
-
-.landing .content {
-    background-color: var(--color-primary);
-}
-
-.landing h2 {
-    color: white;
-    text-align: center;
-    line-height: 1;
-    margin: 2.5em 0;
-}
-
-
-.landing span {
-    text-align: center;
-    font-size: var(--average-font);
-    display: block;
-    color: rgba(255, 255, 255, 0.747);
-    margin-top: 0.8em;
-}
-
-
-
-.landing .image-holder {
-    position: relative;
-}
-
-.landing .image-holder img {
-    width: 100%;
-}
-
 
 
 /* ------------------- blog -------------------- */
