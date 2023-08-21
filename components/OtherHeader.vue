@@ -64,9 +64,10 @@ defineProps<{
 
 @media only screen and (max-width: 600px) {
 
-    .landing .content{
+    .landing .content {
         height: 100vw;
     }
+
     .landing .background-desk {
         display: none;
     }
@@ -80,6 +81,10 @@ defineProps<{
         grid-template-columns: 100%;
         position: relative;
         height: unset;
+    }
+
+    .landing h2 {
+        margin: 20vw 0;
     }
 
 }
