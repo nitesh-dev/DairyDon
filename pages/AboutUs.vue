@@ -26,7 +26,12 @@ const content1 = `In the year 1981 D.D. Yeola family established an Ice cream Pa
             </p>
 
             <img src="../public/images/tri-cream.png" alt="cream">
+
         </div>
+
+        <!-- outline -->
+        <img src="../public/images/outline/oreo.png" class="outline top-left">
+        <img src="../public/images/outline/chocolate.png" class="outline bottom-left">
     </section>
 
     <VisionMission></VisionMission>
@@ -35,16 +40,17 @@ const content1 = `In the year 1981 D.D. Yeola family established an Ice cream Pa
     <Footer></Footer>
 </template>
 <style scoped>
-
-
 /* ----------------- info section -------------- */
+
+.info {
+    position: relative;
+}
 
 .info .inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: center;
-
 }
 
 .info .inner img {
@@ -54,4 +60,47 @@ const content1 = `In the year 1981 D.D. Yeola family established an Ice cream Pa
 }
 
 
+/* ----------- outline ------------- */
+.info .outline {
+    position: absolute;
+    object-fit: contain;
+    z-index: -10;
+}
+
+.info .top-left {
+    top: -4vw;
+    width: 12vw;
+}
+
+.info .bottom-left {
+    left: 0;
+    bottom: -2vw;
+    width: 15vw;
+}
+
+
+
+@media only screen and (max-width: 1500px) {
+    .info .bottom-left {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .info .top-left {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    .info .inner {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2rem;
+        align-items: center;
+
+    }
+}
 </style>

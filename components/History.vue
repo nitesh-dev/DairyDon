@@ -13,21 +13,50 @@ leftContent.push({
 })
 
 leftContent.push({
+    year: '1996',
+    first: 'OUR SECOD OUTLET',
+    last: '@COLLEGE ROAD, NASHIK'
+})
+
+
+leftContent.push({
     year: '2008',
     first: 'OUR 1ST FRANCHISE',
     last: '@INDIRANAGAR, NASHIK'
 })
 
 leftContent.push({
+    year: '2010',
+    first: 'SETUP OUR SECOND FRANCHISE',
+    last: '@NASHIK ROAD'
+})
+
+
+leftContent.push({
     year: '2013',
     first: 'OUR 3RD FRANCHISE',
     last: '@PUNE, KARVE ROAD'
 })
+
+leftContent.push({
+    year: '2015',
+    first: 'OUR 4TH FRANCHISE',
+    last: '@MALEGAON'
+})
+
 leftContent.push({
     year: '2016',
     first: 'OUR 5TH FRANCHISE',
     last: '@NAGPUR'
 })
+
+leftContent.push({
+    year: '2017',
+    first: 'OUR 6TH FRANCHISE',
+    last: '@ASHOKA MARG, NASHIK'
+})
+
+
 leftContent.push({
     year: '2018',
     first: 'OUR 7TH FRANCHISE',
@@ -35,35 +64,15 @@ leftContent.push({
 })
 
 
-const rightContent = Array<{
-    year: string,
-    first: string,
-    last: string
-}>()
+// const rightContent = Array<{
+//     year: string,
+//     first: string,
+//     last: string
+// }>()
 
-rightContent.push({
-    year: '1996',
-    first: 'OUR SECOD OUTLET',
-    last: '@COLLEGE ROAD, NASHIK'
-})
 
-rightContent.push({
-    year: '2010',
-    first: 'SETUP OUR SECOND FRANCHISE',
-    last: '@NASHIK ROAD'
-})
 
-rightContent.push({
-    year: '2015',
-    first: 'OUR 4TH FRANCHISE',
-    last: '@MALEGAON'
-})
 
-rightContent.push({
-    year: '2017',
-    first: 'OUR 6TH FRANCHISE',
-    last: '@ASHOKA MARG, NASHIK'
-})
 
 
 
@@ -73,34 +82,40 @@ rightContent.push({
     <section class="history">
         <div class="page desktop">
             <div class="left">
-                <div class="card-holder" v-for="item in leftContent">
-                    <div class="card">
-                        <div class="area">
-                            <div class="circle">{{ item.year }}</div>
-                            <h2>{{ item.year }}</h2>
-                            <span>{{ item.first }}</span>
-                            <span>{{ item.last }}</span>
-                            <div class="line"></div>
+                <template v-for="item, index in leftContent">
+
+                    <div class="card-holder" v-if="index % 2 == 0">
+                        <div class="card">
+                            <div class="area">
+                                <div class="circle">{{ item.year }}</div>
+                                <h2>{{ item.year }}</h2>
+                                <span>{{ item.first }}</span>
+                                <span>{{ item.last }}</span>
+                                <div class="line"></div>
+                            </div>
+                            <img src="../public/images/history/chip-arrow-right.png">
                         </div>
-                        <img src="../public/images/history/chip-arrow-right.png">
+                        <div class="hidden-line"></div>
                     </div>
-                    <div class="hidden-line"></div>
-                </div>
+                </template>
             </div>
             <div class="right">
-                <div class="card-holder" v-for="item in rightContent">
-                    <div class="card">
-                        <img src="../public/images/history/chip-arrow-left.png">
-                        <div class="area">
-                            <div class="circle">{{ item.year }}</div>
-                            <h2>{{ item.year }}</h2>
-                            <span>{{ item.first }}</span>
-                            <span>{{ item.last }}</span>
-                            <div class="line"></div>
+
+                <template v-for="item, index in leftContent">
+                    <div class="card-holder" v-if="index % 2 != 0">
+                        <div class="card">
+                            <img src="../public/images/history/chip-arrow-left.png">
+                            <div class="area">
+                                <div class="circle">{{ item.year }}</div>
+                                <h2>{{ item.year }}</h2>
+                                <span>{{ item.first }}</span>
+                                <span>{{ item.last }}</span>
+                                <div class="line"></div>
+                            </div>
                         </div>
+                        <div class="hidden-line"></div>
                     </div>
-                    <div class="hidden-line"></div>
-                </div>
+                </template>
             </div>
         </div>
     </section>
@@ -274,6 +289,12 @@ rightContent.push({
 }
 
 
+
+
+/* phone */
+
+
+
 /* --------extra filter -------- */
 
 .history .left .card-holder:first-child .hidden-line {
@@ -282,5 +303,20 @@ rightContent.push({
 
 .history .left .card-holder:last-child .line {
     display: none;
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    .history .card .area {
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .history .desktop{
+        /* temp */
+        display: block;         
+    }
 }
 </style>

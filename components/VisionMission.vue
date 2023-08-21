@@ -36,9 +36,8 @@
 
 
         <!-- outline image -->
-
-        <!-- <img src="../public/images/outline/barries.png" class="outline top-right">
-        <img src="../public/images/outline/oreo.png" class="outline bottom-right"> -->
+        <img src="../public/images/outline/cashcrew2.png" class="outline bottom-left">
+        <img src="../public/images/outline/glass-shake.png" class="outline top-right">
 
     </section>
 </template>
@@ -90,8 +89,8 @@
 
 .vision-mission .outline {
     position: absolute;
-    height: 100px;
     width: auto;
+    z-index: -10;
 }
 
 .vision-mission .top-left {
@@ -99,6 +98,7 @@
     top: 20px;
     width: 55%;
     height: auto;
+    z-index: 1;
 }
 
 .vision-mission .bottom-right {
@@ -106,6 +106,21 @@
     bottom: -20px;
     width: 55%;
     height: auto;
+    z-index: 1;
+}
+
+.vision-mission .top-right {
+    right: 0;
+    width: 11vw;
+    top: 6vw;
+    z-index: 1;
+}
+
+.vision-mission .bottom-left {
+    left: 0;
+    width: 11vw;
+    bottom: 8vw;
+    z-index: 1;
 }
 
 
@@ -131,5 +146,53 @@
 
 .vision-mission .inner-content p {
     max-width: 440px;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .vision-mission .top-right {
+        display: none;
+    }
+
+    .vision-mission .bottom-left {
+        width: 15vw;
+    }
+
+}
+
+@media only screen and (max-width: 700px) {
+
+    .vision-mission .inner-content {
+        gap: 2rem;
+        flex-direction: column;
+    }
+
+    .vision-mission .inner-content>* {
+        width: 100%;
+    }
+
+    .vision-mission .inner-content img {
+        width: 100%;
+        max-height: unset;
+    }
+
+    .vision-mission .inner-content.content2 {
+        flex-direction: column-reverse;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .vision-mission .outline {
+        display: none;
+    }
+
+
+    .vision-mission .bottom-left {
+        display: block;
+        width: 25vw;
+        bottom: 5vw;
+
+    }
+
 }
 </style>
