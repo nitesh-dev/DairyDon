@@ -76,7 +76,8 @@ products.push({
 </script>
 <template>
     <!-- landing -->
-    <OtherHeader active-tab="/products" page-name="Products" :desk-image="deskImage" :phone-image="phoneImage"></OtherHeader>
+    <OtherHeader active-tab="/products" page-name="Products" :desk-image="deskImage" :phone-image="phoneImage">
+    </OtherHeader>
 
 
     <section class="products">
@@ -93,6 +94,11 @@ products.push({
             </div>
         </div>
 
+        <!-- outline -->
+        <img src="../public/images/outline/chocolate.png" class="outline top-left">
+        <img src="../public/images/outline/fruits.png" class="outline bottom-right">
+        <img src="../public/images/outline/cone-cream.png" class="outline bottom-left">
+
     </section>
 
     <div class="center">
@@ -105,7 +111,6 @@ products.push({
     <Footer></Footer>
 </template>
 <style scoped>
-
 /* ------------------- products -------------------- */
 
 .products {
@@ -119,6 +124,7 @@ products.push({
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     gap: 1rem;
+    width: 100%;
 }
 
 .products .card {
@@ -162,6 +168,30 @@ products.push({
 }
 
 
+/* ----------- outline ------------- */
+.products .outline {
+    position: absolute;
+    object-fit: contain;
+    z-index: -10;
+}
+
+.products .top-left {
+    top: -4vw;
+    width: 16vw;
+}
+
+.products .bottom-right {
+    right: 0px;
+    bottom: 2vw;
+    width: 10vw;
+}
+
+.products .bottom-left {
+    left: 0;
+    bottom: -30vw;
+    width: 16vw;
+}
+
 
 /* ----- */
 
@@ -169,5 +199,31 @@ products.push({
     display: flex;
     justify-content: center;
     margin: 4rem 0;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .products .outline {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .products .page {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .products .page {
+        grid-template-columns: 100%;
+    }
+
+    .center {
+        display: flex;
+        justify-content: center;
+        margin: 4rem 0;
+        margin-top: 2rem;
+    }
 }
 </style>

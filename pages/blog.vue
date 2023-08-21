@@ -1,5 +1,5 @@
 <script setup lang='ts'>
-import Header from '../components/Header.vue';
+
 import blog1 from '~/public/images/blog/blog1.jpg'
 import blog2 from '~/public/images/blog/blog2.jpg'
 import blog3 from '~/public/images/blog/blog3.jpg'
