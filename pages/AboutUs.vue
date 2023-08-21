@@ -1,5 +1,4 @@
 <script setup lang='ts'>
-import Header from '../components/Header.vue';
 
 import product1 from '~/public/images/cup-cream.png'
 import deskImage from '~/public/images/header/about-desk.png'

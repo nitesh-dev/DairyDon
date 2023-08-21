@@ -1,8 +1,8 @@
 <script setup lang='ts'>
 
 import cone from '~/public/images/cone-6.png'
-import deskImage from '~/public/images/header/about-desk.png'
-import phoneImage from '~/public/images/header/about-phone.png'
+import deskImage from '~/public/images/header/franchise-desk.png'
+import phoneImage from '~/public/images/header/franchise-phone.png'
 
 
 const heading = "Are you an entrepreneur looking for a good brand with beneficial returns?"

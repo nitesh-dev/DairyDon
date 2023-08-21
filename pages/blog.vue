@@ -10,8 +10,8 @@ import blog7 from '~/public/images/blog/blog7.jpg'
 import blog8 from '~/public/images/blog/blog8.jpg'
 import blog9 from '~/public/images/blog/blog9.jpg'
 
-import deskImage from '~/public/images/header/about-desk.png'
-import phoneImage from '~/public/images/header/about-phone.png'
+import deskImage from '~/public/images/header/blog-desk.png'
+import phoneImage from '~/public/images/header/blog-phone.png'
 
 
 const blogs = Array<{

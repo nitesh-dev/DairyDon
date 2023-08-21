@@ -1,6 +1,6 @@
 <script setup lang='ts'>
-import deskImage from '~/public/images/header/about-desk.png'
-import phoneImage from '~/public/images/header/about-phone.png'
+import deskImage from '~/public/images/header/contact-desk.png'
+import phoneImage from '~/public/images/header/contact-phone.png'
 
 </script>
 <template>

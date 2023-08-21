@@ -9,8 +9,8 @@ import product7 from '~/public/images/product/product7.png'
 import product8 from '~/public/images/product/product8.png'
 import product9 from '~/public/images/product/product9.png'
 
-import deskImage from '~/public/images/header/about-desk.png'
-import phoneImage from '~/public/images/header/about-phone.png'
+import deskImage from '~/public/images/header/product-desk.png'
+import phoneImage from '~/public/images/header/product-phone.png'
 
 const products = Array<{
     image: string,
