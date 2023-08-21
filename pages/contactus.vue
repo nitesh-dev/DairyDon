@@ -208,7 +208,7 @@ import phoneImage from '~/public/images/header/contact-phone.png'
     width: 100%;
     border: 1px solid #DDD;
     background-color: #F4F4F4;
-    padding: 0.7em 1em;
+    padding: 1em;
     outline: none;
     border-radius: 4px;
 }
@@ -222,8 +222,8 @@ import phoneImage from '~/public/images/header/contact-phone.png'
 .contact button {
     margin: 2rem auto;
     display: block;
-    padding: 0.8em 1em;
-    max-width: 450px;
+    padding: 1em;
+    max-width: 500px;
     width: 100%;
     border: none;
     background-color: var(--color-secondary-variant);

@@ -11,7 +11,8 @@ const content = "Well, your search ends here. With profound hold in the Ice Crea
 </script>
 <template>
     <!-- landing -->
-    <OtherHeader active-tab="/franchise" page-name="Franchise" :desk-image="deskImage" :phone-image="phoneImage"></OtherHeader>
+    <OtherHeader active-tab="/franchise" page-name="Franchise" :desk-image="deskImage" :phone-image="phoneImage">
+    </OtherHeader>
 
     <IceCreamInfo :image="cone" buttonText="" :heading="heading" :content="content" subHeading=""></IceCreamInfo>
 
@@ -77,7 +78,7 @@ const content = "Well, your search ends here. With profound hold in the Ice Crea
 
 
                 <h3>Business/work Experience</h3>
-                
+
                 <div class="equal-2">
                     <div class="input">
                         <p>Current Job Business</p>
@@ -106,7 +107,7 @@ const content = "Well, your search ends here. With profound hold in the Ice Crea
 
 
                 <h3>Location Information</h3>
-                
+
                 <div class="equal-2">
                     <div class="input">
                         <p>City <span>*</span></p>
@@ -123,13 +124,16 @@ const content = "Well, your search ends here. With profound hold in the Ice Crea
 
             </form>
         </div>
+
+        <!-- outline -->
+        <img src="../public/images/outline/oreo.png" class="outline top-left">
+        <img src="../public/images/outline/nuts.png" class="outline top-right">
+        <img src="../public/images/outline/cone-cream.png" class="outline bottom-left">
     </section>
 
     <Footer></Footer>
 </template>
 <style scoped>
-
-
 /* ------------------- franchise -------------------- */
 
 .franchise {
@@ -137,13 +141,14 @@ const content = "Well, your search ends here. With profound hold in the Ice Crea
     min-height: 600px;
 }
 
-.franchise .page{
+.franchise .page {
     overflow: auto;
 }
-.franchise form{
+
+.franchise form {
     background-color: white;
     width: 100%;
-    margin-top: 18vw;
+    margin-top: 16vw;
     margin-bottom: 2rem;
     padding: 1rem 2rem;
     border-radius: 16px;
@@ -153,13 +158,13 @@ const content = "Well, your search ends here. With profound hold in the Ice Crea
 
 
 /* ---------- custom hr -------- */
-.franchise h2{
+.franchise h2 {
     text-align: center;
     color: var(--color-secondary);
     margin-bottom: 0;
 }
 
-.franchise h3{
+.franchise h3 {
     color: var(--color-secondary);
     margin-bottom: -0.8rem;
     margin-top: 1.5em;
@@ -197,41 +202,43 @@ const content = "Well, your search ends here. With profound hold in the Ice Crea
 
 /* ----------input ----- */
 
-.franchise .equal-2{
+.franchise .equal-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
 }
 
 
-.franchise .input{
+.franchise .input {
     margin-top: 1.5rem;
 }
 
-.franchise .input p{
+.franchise .input p {
     margin: 0;
     margin-bottom: 2px;
 }
 
 
-.franchise .input p span{
+.franchise .input p span {
     color: #FF4242;
 }
-.franchise input, .franchise select{
+
+.franchise input,
+.franchise select {
     width: 100%;
     border: 1px solid #EBCFE8;
     background-color: #FFFCFF;
-    padding: 0.7em 1em;
+    padding: 1em;
     outline: none;
     border-radius: 4px;
 }
 
 
-.franchise button{
+.franchise button {
     margin: 3rem auto;
     display: block;
-    padding: 0.8em 1em;
-    max-width: 450px;
+    padding: 1em 1em;
+    max-width: 600px;
     width: 100%;
     border: none;
     background-color: var(--color-secondary-variant);
@@ -241,6 +248,31 @@ const content = "Well, your search ends here. With profound hold in the Ice Crea
 }
 
 
+
+/* ----------- outline ------------- */
+.franchise .outline {
+    position: absolute;
+    object-fit: contain;
+    z-index: -10;
+}
+
+.franchise .top-left {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10vw;
+}
+
+.franchise .top-right {
+    right: 0px;
+    top: 1vw;
+    width: 15vw;
+}
+
+.franchise .bottom-left {
+    left: 0;
+    bottom: -20vw;
+    width: 16vw;
+}
 
 
 
@@ -252,7 +284,7 @@ const content = "Well, your search ends here. With profound hold in the Ice Crea
 .franchise .background {
     width: 100%;
     position: absolute;
-    z-index: -2;
+    z-index: -12;
     display: grid;
     grid-template-columns: 100%;
     top: 0;
@@ -261,11 +293,60 @@ const content = "Well, your search ends here. With profound hold in the Ice Crea
 
 
 .franchise .background div {
-    height: 300px;
+    height: 600px;
     background-color: var(--color-secondary-light);
 }
 
 .franchise .background img {
     width: 100%;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .franchise .outline {
+        display: none;
+    }
+
+    .franchise .top-right {
+        width: 20vw;
+        display: block;
+    }
+
+    .franchise form {
+        margin-top: 18vw;
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+
+    .franchise .top-right {
+        width: 28vw;
+        top: -1vw;
+        display: block;
+    }
+
+    .franchise form {
+        margin-top: 25vw;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .franchise .equal-2 {
+        grid-template-columns: 100%;
+        gap: 0rem;
+    }
+
+    .franchise form {
+        padding: 1rem;
+    }
+
+    .franchise button {
+        margin-bottom: 2rem;
+
+    }
+
 }
 </style>
