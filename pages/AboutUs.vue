@@ -1,6 +1,9 @@
 <script setup lang='ts'>
 import Header from '../components/Header.vue';
+
 import product1 from '~/public/images/cup-cream.png'
+import deskImage from '~/public/images/header/about-desk.png'
+import phoneImage from '~/public/images/header/about-phone.png'
 
 const heading1 = "We are passionate about innovation and research"
 const smallHeading = "constantly for new flavours and new ice cream dishes that we can serve you."
@@ -8,17 +11,7 @@ const content1 = `In the year 1981 D.D. Yeola family established an Ice cream Pa
 
 </script>
 <template>
-    <!-- landing -->
-    <section class="landing">
-        <div class="content">
-            <Header active="/about"></Header>
-            <h2>About Us</h2>
-
-        </div>
-        <div class="image-holder">
-            <img src="../public/images/header/outline.png">
-        </div>
-    </section>
+    <OtherHeader active-tab="/about" page-name="About Us" :desk-image="deskImage" :phone-image="phoneImage"></OtherHeader>
 
 
     <!-- ----------- info ------------------ -->
@@ -43,42 +36,6 @@ const content1 = `In the year 1981 D.D. Yeola family established an Ice cream Pa
     <Footer></Footer>
 </template>
 <style scoped>
-.landing {
-    display: grid;
-    grid-template-columns: 100%;
-    position: relative;
-}
-
-.landing .content {
-    background-color: var(--color-primary);
-}
-
-.landing h2 {
-    color: white;
-    text-align: center;
-    line-height: 1;
-    margin: 2.5em 0;
-}
-
-
-.landing span {
-    text-align: center;
-    font-size: var(--average-font);
-    display: block;
-    color: rgba(255, 255, 255, 0.747);
-    margin-top: 0.8em;
-}
-
-
-
-.landing .image-holder {
-    position: relative;
-}
-
-.landing .image-holder img {
-    width: 100%;
-}
-
 
 
 /* ----------------- info section -------------- */
