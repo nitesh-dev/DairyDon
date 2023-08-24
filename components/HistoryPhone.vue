@@ -21,8 +21,7 @@ defineProps<{
             <div class="image">
                 <svg xmlns="http://www.w3.org/2000/svg" width="62" height="126" viewBox="0 0 62 126" fill="none">
                     <path fill-rule="evenodd" clip-rule="evenodd"
-                        d="M0 126H4.83533C10.2677 125.998 15.4944 123.919 19.448 120.188L54.9047 78.6001C58.5217 75.2155 60.8318 70.6622 61.4293 65.7406C61.7449 63.7452 61.7449 61.7126 61.4293 59.7173C60.6964 54.9944 58.3983 50.6558 54.9047 47.3999L19.448 5.81238C15.4944 2.08081 10.2677 0.00183105 4.83533 0H0V126Z"
-                        />
+                        d="M0 126H4.83533C10.2677 125.998 15.4944 123.919 19.448 120.188L54.9047 78.6001C58.5217 75.2155 60.8318 70.6622 61.4293 65.7406C61.7449 63.7452 61.7449 61.7126 61.4293 59.7173C60.6964 54.9944 58.3983 50.6558 54.9047 47.3999L19.448 5.81238C15.4944 2.08081 10.2677 0.00183105 4.83533 0H0V126Z" />
                 </svg>
                 <div class="line"></div>
                 <div class="outer-line"></div>
@@ -46,23 +45,23 @@ defineProps<{
     margin-bottom: 1rem;
 }
 
-.history-phone .card:nth-child(even) .content{
+.history-phone .card:nth-child(even) .content {
     background-color: var(--color-secondary-variant);
 }
 
-.history-phone .card:nth-child(even) svg{
+.history-phone .card:nth-child(even) svg {
     fill: var(--color-secondary-variant) !important;
 }
 
-.history-phone .card:nth-child(even) .circle{
+.history-phone .card:nth-child(even) .circle {
     border: 4px solid #FC0393;
 }
 
-.history-phone .card:nth-child(even) .outer-line{
+.history-phone .card:nth-child(even) .outer-line {
     background-color: #FC0393;
 }
 
-.history-phone .card:nth-child(even) .curve{
+.history-phone .card:nth-child(even) .curve {
     border: 5px solid #FC0393;
 }
 
@@ -104,7 +103,7 @@ defineProps<{
     fill: var(--color-secondary);
 }
 
-.history-phone .card .image{
+.history-phone .card .image {
     position: relative;
 }
 
@@ -170,11 +169,11 @@ defineProps<{
     clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
 }
 
-.history-phone .card:last-child .curve{
+.history-phone .card:last-child .curve {
     display: none;
 }
 
-.history-phone .card:last-child .outer-line{
+.history-phone .card:last-child .outer-line {
     background-color: var(--color-secondary-variant);
 }
 
@@ -184,6 +183,14 @@ defineProps<{
 @media only screen and (max-width: 750px) {
     .history-phone {
         display: block;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .history-phone .card {
+        margin-left: 2rem;
+        margin-right: 2.5rem;
     }
 }
 </style>
