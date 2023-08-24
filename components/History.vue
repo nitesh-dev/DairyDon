@@ -1,4 +1,6 @@
 <script setup lang='ts'>
+import HistoryPhone from './HistoryPhone.vue';
+
 
 const leftContent = Array<{
     year: string,
@@ -118,6 +120,8 @@ leftContent.push({
                 </template>
             </div>
         </div>
+
+        <HistoryPhone :data="leftContent"/>
     </section>
 </template>
 <style scoped>
@@ -291,9 +295,6 @@ leftContent.push({
 
 
 
-/* phone */
-
-
 
 /* --------extra filter -------- */
 
@@ -314,9 +315,9 @@ leftContent.push({
 }
 
 @media only screen and (max-width: 750px) {
-    .history .desktop{
+    .history .desktop {
         /* temp */
-        display: block;         
+        display: none;
     }
 }
 </style>
